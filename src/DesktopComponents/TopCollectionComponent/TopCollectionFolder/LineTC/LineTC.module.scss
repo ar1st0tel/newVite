@@ -1,0 +1,43 @@
+.line {
+  display: grid;
+  grid-template-columns: 4fr repeat(5, 3fr);
+  align-items: center;
+  border-bottom: 1px solid #EBE9E9;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+.name {
+  display: grid;
+  text-align: start;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  grid-template-areas:
+  "pic name"
+  "pic author";
+}
+.nameCard {
+  grid-area: name;
+  font-weight: bold;
+}
+.pic {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: pic;
+}
+.author {
+  grid-area: author;
+}
+.value {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.green {
+  color: #10C352
+}
+
+.red {
+  color: red;
+}

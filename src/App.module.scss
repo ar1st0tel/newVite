@@ -1,0 +1,132 @@
+.background{
+    display: grid;
+    background: #F9F9F9;
+    width: 1440px;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+    .background{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: var(--max-width)) {
+    .background{
+        max-width: 100%;
+    }
+}
+.headerBack {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: grid;
+}
+
+.contentBack {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 10px;
+    display: grid;
+}
+.nav {
+    display: grid;
+    width: 445px;
+}
+@media screen and (max-width: 375px)  {
+    .nav {
+        display: none;
+    }
+
+}
+.box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 7vh;
+    grid-template-columns:repeat(4, auto);
+    color: #606060;
+}
+
+.boxSmall {
+    display: grid;
+    align-items: center;
+    grid-template-columns:repeat(4, auto);
+    gap: 0 3vw;
+    color: #606060;
+}
+.searchArea{
+    border: none;
+    font-family: Poppins,"sans-serif";
+    font-size: 16px;
+    resize: none;
+    background: none;
+    align-content: center;
+    outline: none;
+    }
+.boxSearch {
+    width: 350px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 4vw auto;
+    align-items: center;
+    justify-self: end;
+    height: 57px;
+    background: #EDEDED;
+}
+@media screen and (max-width: 400px)  {
+    .boxSearch {
+        display: none;
+    }
+
+}
+
+.boxWallet:active,
+.boxWallet:hover,
+.boxWallet {
+    width: 200px;
+    height: 57px;
+    color: #FFFFFF;
+    background: #141416;
+    border-radius: 16px;
+    text-decoration: none;
+}
+@media screen and (max-width: 400px)  {
+    .boxWallet {
+        display: none;
+    }
+
+}
+.item:active,
+.item:hover,
+.item
+{
+    text-decoration: none;
+    color: #606060;
+    justify-self: center;
+}
+.fontPoppins {
+    font-family: Poppins, "sans-serif";
+    color: #C2C3CB;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonBorder{
+    border: 2px solid black;
+}
+.a:active
+{
+    color: black;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+.rotate {
+    transition: transform .8s;
+    transform: rotate(360deg);
+}
