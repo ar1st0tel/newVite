@@ -1,0 +1,47 @@
+.table
+{
+  font-family: Poppins, "sans-serif";
+  display: grid;
+  text-align: end;
+  row-gap: 2vh;
+  grid-template-rows: repeat(3, auto) ;
+  grid-template-areas:
+  "header"
+  "title"
+  "line"
+/*можно попробовать убрать все грид-темплейт-ареа*/
+  /*"name volume h24 floor owners items"
+  "name volume h24 floor owners items"
+  "name volume h24 floor owners items"*/
+}
+  .header {
+    text-align: center;
+    color: black;
+    font-size: 45px;
+    margin-bottom: 80px;
+    font-weight: 500;
+  }
+
+  .title {
+    display: grid;
+    grid-template-columns: 4fr repeat(5, 3fr);
+    color: #93989A;
+  }
+  .collection {
+    display: grid;
+    text-align: start;
+  }
+
+  .items {
+    display: grid;
+    grid-template-rows: repeat(4, 10vh);
+  }
+  .explore {
+    display: grid;
+    justify-content: end;
+    color: #ACADB9;
+  }
+  .line {
+    display: grid;
+    grid-area: line;
+  }

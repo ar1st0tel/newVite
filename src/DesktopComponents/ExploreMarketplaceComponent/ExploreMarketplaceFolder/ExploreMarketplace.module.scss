@@ -1,0 +1,137 @@
+$max-width: 375px;
+
+.table {
+  display: grid;
+  grid-template-rows: 5vh 10vh repeat(2, auto);
+  grid-auto-rows: auto;
+  row-gap: 5vh;
+  justify-items: center;
+}
+.text {
+  display: grid;
+  justify-content: center;
+  color: #141416;
+  font-size: 45px;
+  font-family: Poppins, "sans-serif";
+  line-height: 27px;
+  font-weight: 500;
+}
+@media screen and (max-width: #{$max-width}) {
+  .text {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+.filters {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.5vw;
+  justify-content: center;
+  padding-bottom: 8vh;
+
+  .buttonBorder
+  {
+    border: 2px solid black;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: #{$max-width}) {
+    .buttonBorder {
+      height: 37px;
+    }
+  }
+}
+@media screen and (max-width: #{$max-width}) {
+  .imgMobile {
+    max-width: 13.5px;
+    height: auto;
+  }
+}
+.line {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 3vw;
+}
+@media screen and (max-width: #{$max-width}) {
+  .line {
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.priceLine {
+  display: flex;
+  align-items: center;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: #ffffff;
+  border-radius: 23px;
+  width: fit-content;
+  cursor: pointer;
+}
+.cardContainer {
+  padding: 15px;
+}
+.item:hover {
+  border: 1px solid firebrick;
+  border-radius: 50px;
+}
+.img {
+  grid-area: img;
+  justify-self: center;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0 15px 21px 15px;
+}
+.explore {
+  margin: 60px 0;
+  display: grid;
+  justify-content: end;
+  color: #ACADB9;
+}
+.name {
+  grid-area: name;
+  color: #141416;
+  font-weight: 600;
+  font-size: 20px;
+}
+.lineInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  grid-area: info;
+  color: #94A3B8;
+  font-size: 14px;
+}
+.bid {
+  grid-area: bid;
+  font-size: 14px;
+}
+.buttonBid {
+  height: 50%;
+  color: white;
+  background: #201F1F;
+}
+.buttonAlign {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: #{$max-width}) {
+  .buttonAlign {
+    font-size: 10px;
+  }
+}
+.a:active,
+.a:hover,
+.a
+{
+  text-decoration: none;
+  color: #ACADB9;
+}
