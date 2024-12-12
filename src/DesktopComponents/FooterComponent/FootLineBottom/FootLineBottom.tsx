@@ -1,8 +1,8 @@
 import classes from "./FootLineBottom.module.scss";
-import Inst from "../../../Pictures/Inst.png";
-import FB from "../../../Pictures/FB.png";
-import LinkedIn from "../../../Pictures/LinkedIn.png";
-import Twitter from "../../../Pictures/Twitter.png";
+import Inst from "@/Pictures/Inst.png";
+import FB from "@/Pictures/FB.png";
+import LinkedIn from "@/Pictures/LinkedIn.png";
+import Twitter from "@/Pictures/Twitter.png";
 import { NavLink } from "react-router-dom";
 
 const FootLineBottom = () => {

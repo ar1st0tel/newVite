@@ -4,7 +4,7 @@ import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 import CardExtended from "../CardExtended/CardExtended.tsx";
 import { useEffect } from "react";
-import ArrowLeft from "../../../../Pictures/ArrowLeft.png";
+import ArrowLeft from "@/Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
 
 const connector = connect(

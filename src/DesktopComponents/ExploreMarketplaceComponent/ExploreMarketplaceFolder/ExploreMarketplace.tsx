@@ -1,7 +1,7 @@
 import classes from "./ExploreMarketplace.module.scss";
-import Category from "../../../Pictures/Category.png";
-import Collection from "../../../Pictures/Collection.png";
-import Price from "../../../Pictures/Price.png";
+import Category from "@/Pictures/Category.png";
+import Collection from "@/Pictures/Collection.png";
+import Price from "@/Pictures/Price.png";
 import { CardCase } from "./CardCase/CardCase.tsx";
 import { useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";

@@ -1,6 +1,6 @@
-import classes from ".././CardExtended/CardExtended.module.scss";
-import EthereumBig from "../../../../Pictures/EthereumBig.png";
-import BidPicture from "../../../../Pictures/BidPicture.png";
+import classes from "./CardExtended/CardExtended.module.scss";
+import EthereumBig from "@/Pictures/EthereumBig.png";
+import BidPicture from "@/Pictures/BidPicture.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 
 interface CardExtendedProps {

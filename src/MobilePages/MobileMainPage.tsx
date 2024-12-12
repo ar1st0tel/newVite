@@ -1,6 +1,5 @@
 import MobileHeader from "../MobileComponents/MobileHeaderComponent/MobileHeader.tsx";
 import MobileTopBanner from "../MobileComponents/MobileTopBanner/MobileTopBanner.tsx";
-import CardsPreview from "../MobileComponents/MobileCardsPreviewComponent/CardsPreview.tsx";
 import MobileTopCollection, {
   linesOnPage,
 } from "../MobileComponents/MobileTopCollectionComponent/MobileTopCollection.tsx";
@@ -52,7 +51,6 @@ const MobileMainPage = connector(
         <>
           <MobileHeader />
           <MobileTopBanner />
-          <CardsPreview />
           <MobileTopCollection />
           <MobileExploreMarketplace />
           <MobileFooter />

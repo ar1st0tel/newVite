@@ -1,12 +1,12 @@
 import ExploreMarketplace from "./ExploreMarketplaceFolder/ExploreMarketplace.tsx";
 import classes from "./ExploreMarketplaceComponent.module.scss";
-import ExploreAll from "../../HelpersComponents/ExploreAll/ExploreAll.tsx";
+import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
-import { cardsOnPage } from "../../MobilePages/MobileDiscoverPage.tsx";
-import { LoadingImg } from "../../DesktopPages/Discover/ContentAndLoading/ContentAndLoading.tsx";
+import { cardsOnPage } from "@/MobilePages/MobileDiscoverPage.tsx";
+import { LoadingImg } from "@/DesktopPages/Discover/ContentAndLoading/ContentAndLoading.tsx";
 
 const connector = connect(
   (state: RootState) => ({

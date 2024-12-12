@@ -1,8 +1,8 @@
 import classes from "./MobileTopBanner.module.scss";
-import Line from "../../Pictures/Line.png";
-import TrustPilot from "../../Pictures/TrustPilot.png";
-import TrustPilotName from "../../Pictures/TrustPilotName.png";
-import Stars from "../../Pictures/Stars.png";
+import Line from "@/Pictures/Line.png";
+import TrustPilot from "@/Pictures/TrustPilot.png";
+import TrustPilotName from "@/Pictures/TrustPilotName.png";
+import Stars from "@/Pictures/Stars.png";
 import ButtonExplore from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonExplore.tsx";
 import ButtonCreate from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonCreate.tsx";
 
