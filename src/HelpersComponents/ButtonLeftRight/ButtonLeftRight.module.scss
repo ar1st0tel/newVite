@@ -3,16 +3,17 @@
   width: 9vw;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+
   .Left {
     color: #929292;
-    background: #FCFCFD;
+    background: #fcfcfd;
     border-radius: 17px 0 0 17px;
     border-right: solid 0.5px black;
   }
 
   .Right {
-    color: #23262F;
-    background: #FCFCFD;
+    color: #23262f;
+    background: #fcfcfd;
     border-radius: 0 17px 17px 0;
     border-left: 0.5px solid black;
   }

@@ -1,0 +1,12 @@
+.logos {
+  display: grid;
+  justify-items: end;
+}
+
+.box1 {
+  display: grid;
+  align-items: end;
+  grid-template-columns: repeat(4, auto);
+  gap: 54px;
+  color: #606060;
+}

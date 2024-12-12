@@ -2,14 +2,16 @@
   display: grid;
   grid-template-rows: 2fr 1fr;
 }
-.strong{
-  font-family: Public Sans, sans-serif;
+
+.strong {
+  font-family: "Public Sans", sans-serif;
   font-size: 36.77px;
   font-weight: 600;
   line-height: 45.96px;
   display: grid;
   align-items: end;
 }
+
 .weak {
   font-family: Inter, sans-serif;
   font-size: 14px;

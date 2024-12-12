@@ -1,0 +1,69 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: #fff;
+  border-radius: 23px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.item:hover {
+  border: 1px solid firebrick;
+  border-radius: 50px;
+}
+
+.cardContainer {
+  padding: 15px;
+  width: 254px;
+}
+
+.img {
+  grid-area: img;
+  justify-self: center;
+  width: 254px;
+  max-height: 254px;
+  border-radius: 19px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0 15px 21px;
+}
+
+.name {
+  grid-area: name;
+  color: #141416;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.lineInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  grid-area: info;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.priceLine {
+  display: flex;
+  align-items: center;
+}
+
+.bid {
+  grid-area: bid;
+  font-size: 14px;
+}
+
+.buttonBid {
+  height: 50%;
+  color: white;
+  background: #201f1f;
+}

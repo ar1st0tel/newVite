@@ -1,13 +1,16 @@
-import classes from '../../../App.module.scss';
-import Search from "../../../Pictures/Search.png"
+import classes from "./SearchArea.module.scss";
+import Search from "../../../Pictures/Search.png";
 
 const SearchArea = () => {
-    return (<div className={classes.boxSearch}>
+  return (
+    <div className={classes.boxSearch}>
+      <img className={classes.item} src={Search} alt="1" />
 
-                <img className={classes.item} src={Search} alt='1'/>
-
-            <input className={classes.searchArea} placeholder="Search Art Work / Creator"/>
-        </div>
-    )
-}
-export default SearchArea
+      <input
+        className={classes.searchArea}
+        placeholder="Search Art Work / Creator"
+      />
+    </div>
+  );
+};
+export default SearchArea;

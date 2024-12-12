@@ -1,0 +1,22 @@
+@import "src/variables";
+
+.button2:active,
+.button2:hover,
+.button2 {
+  border-radius: 12px;
+  border: 1.5px solid black;
+  max-height: 57px;
+  height: 57px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+}
+@media screen and (max-width: $max-width-mobile) {
+  .button2:active,
+  .button2:hover,
+  .button2 {
+    font-size: 12px;
+    max-height: 41px;
+  }
+}

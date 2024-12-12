@@ -1,0 +1,27 @@
+@import "src/variables";
+
+.nav {
+  display: grid;
+  width: 445px;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .nav {
+    display: none;
+  }
+}
+
+.boxSmall {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  gap: 0 3vw;
+  color: #606060;
+}
+.item:active,
+.item:hover,
+.item {
+  text-decoration: none;
+  color: #606060;
+  justify-self: center;
+}

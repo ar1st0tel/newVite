@@ -1,0 +1,25 @@
+.contentBack {
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px 10px;
+  display: grid;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: spin 2s linear infinite;
+}

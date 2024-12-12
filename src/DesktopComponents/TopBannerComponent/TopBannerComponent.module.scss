@@ -1,0 +1,18 @@
+@import "src/variables";
+
+.content1Back {
+  margin: 0 auto;
+  display: grid;
+  padding-bottom: 20vh;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .table {
+    grid-template-columns: 1fr;
+  }
+}

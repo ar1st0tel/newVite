@@ -5,14 +5,14 @@ import ExploreMarketplaceComponent from "../DesktopComponents/ExploreMarketplace
 import FooterComponent from "../DesktopComponents/FooterComponent/FooterComponent.tsx";
 
 const PageMain = () => {
-        return (
-            <div>
-                <NavigationComponent/>
-                <TopBannerComponent/>
-                <TopCollectionComponent/>
-                <ExploreMarketplaceComponent/>
-                <FooterComponent/>
-            </div>
-        )
-    }
-export default PageMain
+  return (
+    <>
+      <NavigationComponent />
+      <TopBannerComponent />
+      <TopCollectionComponent />
+      <ExploreMarketplaceComponent />
+      <FooterComponent />
+    </>
+  );
+};
+export default PageMain;

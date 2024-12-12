@@ -1,0 +1,144 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  margin: 55px 50px;
+  padding: 60px;
+  border-radius: 25px;
+}
+
+.authorAndOwner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nameAndDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 465px;
+}
+
+.cardName {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.picContainer {
+  display: flex;
+  width: 564px;
+  height: 560px;
+}
+
+.img {
+  border-radius: 35px;
+  width: 564px;
+  height: 560px;
+}
+
+.titleName {
+  color: #292b39;
+  font-weight: 600;
+  font-size: 51px;
+  line-height: 32px;
+  width: 100%;
+}
+
+.description {
+  width: 430px;
+  color: #888;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  font-family: Poppins, sans-serif;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.authorImgContainer {
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+}
+
+.greyText {
+  color: #8d8d8d;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.greyTextEnd {
+  display: flex;
+  color: #8d8d8d;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  justify-content: end;
+}
+
+.blackText {
+  color: #000;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.blackTextBold {
+  display: flex;
+  color: #000;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 49px;
+  gap: 7px;
+}
+
+.blackTextLight {
+  color: #000;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+.lineInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ethereumImg {
+  height: 36px;
+}
+
+.bid {
+  display: flex;
+}
+
+.buttonBid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  gap: 10px;
+  width: 100%;
+  height: 79px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  font-family: Poppins, sans-serif;
+}
