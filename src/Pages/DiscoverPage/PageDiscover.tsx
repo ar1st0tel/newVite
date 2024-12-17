@@ -1,12 +1,11 @@
-import ContentAndLoading, {
-  LoadingImg,
-} from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import { useEffect } from "react";
 import NavigationComponent from "@/Components/NavigationComponent/NavigationComponent.tsx";
 import FooterComponent from "@/Components/FooterComponent/FooterComponent.tsx";
+import ExploreMarketplace from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
+import LoadingImg from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
 
 const connector = connect(
   (state: RootState) => ({
@@ -38,7 +37,7 @@ const PageDiscover = connector(
       return (
         <>
           <NavigationComponent />
-          <ContentAndLoading />
+          <ExploreMarketplace />
           <LoadingImg />
           <FooterComponent />
         </>

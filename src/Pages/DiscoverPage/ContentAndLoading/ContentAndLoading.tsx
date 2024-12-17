@@ -1,16 +1,5 @@
 import classes from "./ContentAndLoading.module.scss";
 import Loading from "@/Pictures/Loading.png";
-import ExploreMarketplace from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
-
-const ContentAndLoading = () => {
-  return (
-    <div className={classes.contentBack}>
-      <ExploreMarketplace />
-    </div>
-  );
-};
-
-export default ContentAndLoading;
 
 const LoadingImg = () => {
   return (
@@ -19,4 +8,4 @@ const LoadingImg = () => {
     </div>
   );
 };
-export { LoadingImg };
+export default LoadingImg;

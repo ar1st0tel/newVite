@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
-import { LoadingImg } from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
+import LoadingImg from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
 import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 import { useMediaQuery } from "react-responsive";
 
