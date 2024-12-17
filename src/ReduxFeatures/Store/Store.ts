@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { CardReducer } from "../CardSlice/CardSlice.ts";
-import { LineReducer } from "../LineSlice/LineSlice.ts";
+import { CardReducer } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
+import { LineReducer } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 
 const reducers = combineReducers({
   CardSlice: CardReducer,

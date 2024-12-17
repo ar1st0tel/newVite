@@ -1,0 +1,55 @@
+@use "../../variables" as *;
+
+.content1Back {
+  display: flex;
+  margin: 0 0 100px 60px;
+  flex-direction: column;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .table {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .content1Back {
+    margin-left: 30px;
+  }
+}
+
+.creators {
+  display: none;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .creators {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-family: Poppins, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 11px;
+    margin-right: 40px;
+    gap: 20px;
+  }
+  .letterSpace {
+    letter-spacing: 2px;
+  }
+}
+
+.bord {
+  width: 12em;
+  border-top: 1px solid gray;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .bord {
+    display: none;
+  }
+}

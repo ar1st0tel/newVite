@@ -12,6 +12,7 @@ export interface CardSlice {
   author?: string;
   authorPic?: string;
   timeOfEnd?: string;
+  likes?: number;
 }
 
 type initialStateType = {
