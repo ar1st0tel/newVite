@@ -11,15 +11,3 @@
   display: grid;
   grid-template-rows: repeat(4, 10vh);
 }
-
-.explore {
-  display: flex;
-  justify-content: flex-end;
-  color: #acadb9;
-}
-
-@media screen and (max-width: $max-width-mobile) {
-  .explore {
-    justify-content: center;
-  }
-}

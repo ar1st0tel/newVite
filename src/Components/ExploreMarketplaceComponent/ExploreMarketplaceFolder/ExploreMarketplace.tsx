@@ -7,10 +7,10 @@ import { useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 const ExploreMarketplace = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 375px)" });
+  const isMobile = useMediaQuery({ maxWidth: 425 });
   const location = useLocation();
-  const hideButton: boolean = location.pathname === "/DiscoverPage" || isMobile;
-  const topicNFT: boolean = location.pathname === "/DiscoverPage";
+  const hideButton: boolean = location.pathname === "/discover" || isMobile;
+  const topicNFT: boolean = location.pathname === "/discover";
   return (
     <>
       <div className={classes.text}>

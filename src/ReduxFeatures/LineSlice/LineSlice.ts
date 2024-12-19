@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
 import { fetchLinesAsync } from "@/Api/AsyncThunk/FetchLinesAsync.ts";
 
 export interface LineSlice {
@@ -27,7 +27,7 @@ const initialState: initialStateType = {
   lines: [],
 };
 
-export const LineSlice = createSlice({
+export const LineSlice: Slice<initialStateType> = createSlice({
   name: "SliceOfLines",
   initialState,
   reducers: {

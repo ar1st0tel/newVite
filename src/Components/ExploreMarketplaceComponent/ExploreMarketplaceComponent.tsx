@@ -5,7 +5,6 @@ import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
 import LoadingImg from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
-import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 import { useMediaQuery } from "react-responsive";
 
 const connector = connect(
@@ -21,7 +20,7 @@ type Props = ConnectedProps<typeof connector>;
 let cardsOnPage = 8;
 const ExploreMarketplaceComponent = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
-    const isMobile = useMediaQuery({ maxWidth: 375 });
+    const isMobile = useMediaQuery({ maxWidth: 425 });
     const [message, setMessage] = useState(false);
     useEffect(() => {
       if (isMobile) {
@@ -53,7 +52,6 @@ const ExploreMarketplaceComponent = connector(
       return (
         <div className={classes.contentBack}>
           <ExploreMarketplace />
-          <ExploreAll />
         </div>
       );
     }

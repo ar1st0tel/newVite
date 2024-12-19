@@ -29,7 +29,7 @@ const CardExtendedComponent = connector(
     isLoaded,
     fetchCardsAsync,
   }: CardExtendedProps) => {
-    const isMobile = useMediaQuery({ query: "(max-width: 375px)" });
+    const isMobile = useMediaQuery({ maxWidth: 425 });
     const { id } = useParams<{ id: string }>();
     useEffect(() => {
       fetchCardsAsync();

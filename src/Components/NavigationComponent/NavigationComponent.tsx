@@ -3,7 +3,7 @@ import LogoBlack from "@/Pictures/LogoBlack.png";
 import NavigationTitles from "@/Components/NavigationComponent/NavigationTitles/NavigationTitles.tsx";
 import SearchArea from "@/Components/NavigationComponent/SearchArea/SearchArea.tsx";
 import { NavLink } from "react-router-dom";
-import OptionsMobile from "@/Pictures/OptionsMobile.png";
+import OptionMobile from "@/Components/NavigationComponent/OptionMobile/OptionMobile.tsx";
 
 const NavigationComponent = () => {
   return (
@@ -18,7 +18,7 @@ const NavigationComponent = () => {
         <NavigationTitles />
         <SearchArea />
         <button className={classes.boxWallet}>CONNECT WALLET</button>
-        <img className={classes.optionMobile} src={OptionsMobile} alt="1" />
+        <OptionMobile />
       </div>
     </div>
   );

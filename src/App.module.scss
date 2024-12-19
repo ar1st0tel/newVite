@@ -1,7 +1,6 @@
 @use "src/variables" as *;
 
 .background {
-  display: grid;
   background: #f9f9f9;
   width: 1440px;
   margin: 0 auto;
@@ -11,6 +10,7 @@
 @media screen and (max-width: $max-width-mobile) {
   .background {
     max-width: 100%;
+    justify-items: center;
   }
 }
 

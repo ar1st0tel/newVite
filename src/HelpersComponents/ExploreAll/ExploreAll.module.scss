@@ -1,3 +1,5 @@
+@use "src/variables" as *;
+
 .link:active,
 .link:hover,
 .link {
@@ -6,8 +8,14 @@
 }
 
 .explore {
-  margin: 60px 0;
-  display: grid;
-  justify-content: end;
+  margin: 80px 70px;
+  display: flex;
+  justify-content: flex-end;
   color: #acadb9;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .explore {
+    justify-content: center;
+  }
 }

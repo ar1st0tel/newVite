@@ -3,6 +3,7 @@ import NavigationComponent from "@/Components/NavigationComponent/NavigationComp
 import TopBannerComponent from "@/Components/TopBannerComponent/TopBannerComponent.tsx";
 import TopCollectionComponent from "@/Components/TopCollectionComponent/TopCollectionComponent.tsx";
 import ExploreMarketplaceComponent from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceComponent.tsx";
+import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 
 const PageMain = () => {
   return (
@@ -10,7 +11,9 @@ const PageMain = () => {
       <NavigationComponent />
       <TopBannerComponent />
       <TopCollectionComponent />
+      <ExploreAll />
       <ExploreMarketplaceComponent />
+      <ExploreAll />
       <FooterComponent />
     </>
   );

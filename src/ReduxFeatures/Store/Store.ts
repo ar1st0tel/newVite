@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { CardReducer } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 import { LineReducer } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
+import { BidListReducer } from "@/ReduxFeatures/BidListSlice/BidListSlice.ts";
 
 const reducers = combineReducers({
   CardSlice: CardReducer,
   LineSlice: LineReducer,
+  BidListSlice: BidListReducer,
 });
 export const store = configureStore({
   reducer: reducers,

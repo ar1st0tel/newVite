@@ -15,6 +15,11 @@
 @media screen and (max-width: $max-width-mobile) {
   .box {
     border-bottom: 1px solid #cbcbcb;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img selector"
+      "NOTHING options";
   }
   .headerBack {
     margin: 30px;
@@ -53,14 +58,6 @@
   background: #141416;
   border-radius: 16px;
   text-decoration: none;
-}
-.optionMobile {
-  display: none;
-}
-@media screen and (max-width: $max-width-mobile) {
-  .optionMobile {
-    display: flex;
-  }
 }
 @media screen and (max-width: $max-width-mobile) {
   .boxWallet {

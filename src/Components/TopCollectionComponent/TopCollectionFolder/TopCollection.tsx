@@ -6,7 +6,6 @@ import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { useEffect } from "react";
 import TableTitle from "@/Components/TopCollectionComponent/TopCollectionFolder/TableTitle/TableTitle.tsx";
 import LineTC from "@/Components/TopCollectionComponent/TopCollectionFolder/LineTC/LineTC.tsx";
-import ExploreAll from "@/HelpersComponents/ExploreAll/ExploreAll.tsx";
 
 const connector = connect(
   (state: RootState) => ({
@@ -50,9 +49,6 @@ const TopCollection = connector(
                 <LineTC key={lineItem.id} line={lineItem} />
               ))}
             </>
-          </div>
-          <div className={classes.explore}>
-            <ExploreAll />
           </div>
         </>
       );
