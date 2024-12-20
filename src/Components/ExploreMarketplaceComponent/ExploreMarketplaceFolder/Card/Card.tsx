@@ -13,11 +13,12 @@ const Card: React.FC<CardProps> = ({ card }) => {
     navigate(`/card/${id}`);
   };
   return (
-    <div className={classes.item} key={card.id}>
-      <div
-        className={classes.cardContainer}
-        onClick={() => handleCardClick(card.id)}
-      >
+    <div
+      className={classes.item}
+      key={card.id}
+      onClick={() => handleCardClick(card.id)}
+    >
+      <div className={classes.cardContainer}>
         <img
           className={classes.img}
           src={card.img}

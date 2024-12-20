@@ -7,9 +7,11 @@ import { useEffect } from "react";
 import ArrowLeft from "@/Pictures/ArrowLeft.png";
 import classes from "./CardExtendedComponent.module.scss";
 import CardsFromCreator from "@/Components/CardExtendedComponent/CardsFromCreator/CardsFromCreator.tsx";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Card from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/Card/Card.tsx";
+import BidCardComponent from "@/Components/BidCardComponent/BidCardComponent.tsx";
+import { useModalContext } from "@/ContextHooks/ContexHooks.ts";
 
 const connector = connect(
   (state: RootState) => ({
@@ -29,11 +31,32 @@ const CardExtendedComponent = connector(
     isLoaded,
     fetchCardsAsync,
   }: CardExtendedProps) => {
-    const isMobile = useMediaQuery({ maxWidth: 425 });
-    const { id } = useParams<{ id: string }>();
     useEffect(() => {
       fetchCardsAsync();
     }, [fetchCardsAsync]);
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+      navigate(-1);
+    };
+    const isMobile = useMediaQuery({ maxWidth: 425 });
+    const { id } = useParams<{ id: string }>();
+    const { showModal, setShowModal } = useModalContext();
+    const toggleModal = () => {
+      setShowModal(!showModal);
+    };
+    const handleClickOutside = (elem: MouseEvent) => {
+      const modalElement = document.getElementById("modalWindow");
+      if (modalElement && !modalElement.contains(elem.target as Node)) {
+        setShowModal(false);
+      }
+    };
+    useEffect(() => {
+      if (showModal) {
+        document.addEventListener("mousedown", handleClickOutside);
+      }
+      return () =>
+        document.removeEventListener("mousedown", handleClickOutside);
+    }, [showModal]);
     if (isPending) {
       return <div>...loading...</div>;
     }
@@ -51,25 +74,32 @@ const CardExtendedComponent = connector(
       );
       return (
         <>
-          <div className={classes.title}>
-            <img src={ArrowLeft} alt="1" />
-            Product Detail
+          <div className={showModal ? classes.blur : classes.noBlur}>
+            <div className={classes.title}>
+              <img src={ArrowLeft} alt="1" onClick={handleGoBack} />
+              Product Detail
+            </div>
+            <CardExtended
+              key={mainCard.id}
+              cardExtended={mainCard}
+              onButtonClick={toggleModal}
+            />
+            <div className={classes.fromCreatorTitle}>From Creator</div>
+            <div className={classes.itemsTable}>
+              {!isMobile
+                ? restCards
+                    .slice(0, 5) // cards on Desktop page
+                    .map((itemToShow: CardSlice) => (
+                      <CardsFromCreator key={itemToShow.id} card={itemToShow} />
+                    ))
+                : restCards
+                    .slice(0, 3) // cards on Mobile page
+                    .map((itemToShow: CardSlice) => (
+                      <Card key={itemToShow.id} card={itemToShow} />
+                    ))}
+            </div>
           </div>
-          <CardExtended key={mainCard.id} cardExtended={mainCard} />
-          <div className={classes.fromCreatorTitle}>From Creator</div>
-          <div className={classes.itemsTable}>
-            {!isMobile
-              ? restCards
-                  .slice(0, 5)
-                  .map((itemToShow: CardSlice) => (
-                    <CardsFromCreator key={itemToShow.id} card={itemToShow} />
-                  ))
-              : restCards
-                  .slice(0, 3)
-                  .map((itemToShow: CardSlice) => (
-                    <Card key={itemToShow.id} card={itemToShow} />
-                  ))}
-          </div>
+          {showModal && <BidCardComponent />}
         </>
       );
     }

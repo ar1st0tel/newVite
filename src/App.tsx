@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.module.scss";
 import WebFont from "webfontloader";
 import AppRoutes from "@/AppRoutes/AppRoutes.tsx";
+import { ModalContext } from "@/ContextHooks/ContexHooks.ts";
 
 function App() {
+  const [showModal, setShowModal] = useState<boolean>(false);
   useEffect(() => {
     WebFont.load({
       google: {
@@ -12,9 +14,9 @@ function App() {
     });
   }, []);
   return (
-    <>
-      <AppRoutes />
-    </>
+    <ModalContext.Provider value={{ showModal, setShowModal }}>
+      <AppRoutes />;
+    </ModalContext.Provider>
   );
 }
 

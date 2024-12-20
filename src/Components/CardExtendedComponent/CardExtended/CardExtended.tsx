@@ -2,29 +2,20 @@ import classes from "./CardExtended.module.scss";
 import EthereumBig from "@/Pictures/EthereumBig.png";
 import BidPicture from "@/Pictures/BidPicture.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
-import { useState } from "react";
 
 interface CardExtendedProps {
   cardExtended: CardSlice;
+  onButtonClick: () => void;
 }
 
-const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
-  const [showCard, setShowCard] = useState(false);
-  const handlerBitButtonClick = () => {
-    setShowCard(true);
-  };
-  const closeCard = () => {
-    return setShowCard(false);
-  };
+const CardExtended: React.FC<CardExtendedProps> = ({
+  cardExtended,
+  onButtonClick,
+}) => {
   return (
     <div className={classes.card} key={cardExtended.id}>
       <div className={classes.picContainer}>
-        <img
-          className={classes.img}
-          src={cardExtended.img}
-          alt={cardExtended.name}
-          loading="lazy"
-        />
+        <img src={cardExtended.img} alt={cardExtended.name} loading="lazy" />
       </div>
       <div className={classes.nameAndDescription}>
         <div className={classes.cardName}>
@@ -75,7 +66,7 @@ const CardExtended: React.FC<CardExtendedProps> = ({ cardExtended }) => {
           </div>
         </div>
         <div className={classes.bid}>
-          <button className={classes.buttonBid} onClick={handlerBitButtonClick}>
+          <button className={classes.buttonBid} onClick={onButtonClick}>
             <img src={BidPicture} alt="1" /> Place Bid
           </button>
         </div>

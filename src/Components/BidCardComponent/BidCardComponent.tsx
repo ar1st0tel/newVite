@@ -22,7 +22,7 @@ const BidCardComponent = () => {
     setSelectedOption(event.target.value);
   };
   return (
-    <div className={classes.bidContent}>
+    <div className={classes.bidContent} id="modalWindow">
       <div className={classes.bidCardContainer}>
         <div className={classes.bidDate}>
           <span className={classes.title}>History of Bid</span>

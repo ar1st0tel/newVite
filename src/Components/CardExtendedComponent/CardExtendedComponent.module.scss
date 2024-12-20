@@ -1,5 +1,15 @@
 @use "src/variables" as *;
 
+.blur {
+  position: relative;
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.noBlur {
+  position: relative;
+}
+
 .title {
   display: flex;
   gap: 15px;
@@ -10,6 +20,10 @@
   font-size: 31px;
   line-height: 28px;
   margin: 0 50px;
+}
+
+.title img {
+  cursor: pointer;
 }
 
 .itemsTable {
