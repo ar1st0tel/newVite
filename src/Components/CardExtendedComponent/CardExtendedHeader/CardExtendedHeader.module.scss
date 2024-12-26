@@ -1,0 +1,21 @@
+@use "src/variables" as *;
+.title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: #23262f;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 28px;
+  margin: 0 50px;
+}
+
+.title img {
+  cursor: pointer;
+}
+@media screen and (max-width: $max-width-mobile) {
+  .title {
+    display: none;
+  }
+}

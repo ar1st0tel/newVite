@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { fetchBidListAsync } from "@/Api/AsyncThunk/FetchBidListAsync.ts";
+import { fetchBidListAsync } from "@/Api/AsyncThunk/FetchBidListAsync/FetchBidListAsync.ts";
 
 export interface BidListSlice {
   id: number;

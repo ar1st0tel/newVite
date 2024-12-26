@@ -7,6 +7,8 @@ import EthereumBig from "@/Pictures/EthereumBig.png";
 interface BidListProps {
   bidList: BidListSlice;
 }
+const formatDateTime = (date: string, time: string): string =>
+  `${date} at ${time}`;
 
 const BidList: React.FC<BidListProps> = ({ bidList }) => {
   return (
@@ -23,7 +25,7 @@ const BidList: React.FC<BidListProps> = ({ bidList }) => {
         <div>
           <div className={classes.name}>{bidList.name}</div>
           <div className={classes.date}>
-            {bidList.date} at {bidList.time}
+            {formatDateTime(bidList.date, bidList.time)}
           </div>
         </div>
       </div>

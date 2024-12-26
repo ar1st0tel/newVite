@@ -1,16 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-interface IFetchBidListApi {
-  id: number;
-  picture: string;
-  name: string;
-  price: number;
-  date: string;
-  time: string;
-}
-
-export type FetchBidListApi = IFetchBidListApi[];
+import { FetchBidListApi } from "@/Api/AsyncThunk/FetchBidListAsync/types.ts";
 
 export const fetchBidListAsync = createAsyncThunk(
   "BidHistory/fetchBidHistory",

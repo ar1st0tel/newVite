@@ -1,18 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-interface ILinesApi {
-  id: number;
-  pic: string;
-  name: string;
-  author: string;
-  volume: string;
-  dayPercent: string;
-  floorPrice: number;
-  owners: number;
-  items: number;
-}
-export type LinesApi = ILinesApi[];
+import { LinesApi } from "@/Api/AsyncThunk/FetchLinesAsync/types.ts";
 
 export const fetchLinesAsync = createAsyncThunk(
   "lines/fetchLines",

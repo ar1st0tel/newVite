@@ -1,21 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-interface ICardApi {
-  id: string;
-  name: string;
-  price: string;
-  img: string;
-  description?: string;
-  owner?: string;
-  ownerPic?: string;
-  author?: string;
-  authorPic?: string;
-  timeOfEnd?: string;
-  likes?: number;
-}
-
-export type CardsApi = ICardApi[];
+import { CardsApi } from "@/Api/AsyncThunk/FetchCardsAsync/types.ts";
 
 export const fetchCardsAsync = createAsyncThunk(
   "CardSlice/fetchCards",

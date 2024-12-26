@@ -1,0 +1,36 @@
+@use "src/variables" as *;
+
+.bidDate {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.title {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  color: black;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+.dateNow {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #888888;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .dateNow {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}

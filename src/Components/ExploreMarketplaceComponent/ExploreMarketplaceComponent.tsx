@@ -1,21 +1,19 @@
 import ExploreMarketplace from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.tsx";
-import classes from "./ExploreMarketplaceComponent.module.scss";
 import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
-import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync.ts";
-import LoadingImg from "@/Pages/DiscoverPage/ContentAndLoading/ContentAndLoading.tsx";
+import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync/FetchCardsAsync.ts";
 import { useMediaQuery } from "react-responsive";
+import LoadingElem from "@/HelpersComponents/LoadingElem/LoadingElem.tsx";
 
-const connector = connect(
-  (state: RootState) => ({
-    cards: state.CardSlice.cards,
-    isLoaded: state.CardSlice.isLoaded,
-    isError: state.CardSlice.isError,
-    isPending: state.CardSlice.isPending,
-  }),
-  { fetchCardsAsync }
-);
+const mapStateToProps = (state: RootState) => ({
+  cards: state.CardSlice.cards,
+  isLoaded: state.CardSlice.isLoaded,
+  isError: state.CardSlice.isError,
+  isPending: state.CardSlice.isPending,
+});
+const mapDispatchToProps = { fetchCardsAsync };
+const connector = connect(mapStateToProps, mapDispatchToProps);
 type Props = ConnectedProps<typeof connector>;
 let cardsOnPage = 8;
 const ExploreMarketplaceComponent = connector(
@@ -38,24 +36,11 @@ const ExploreMarketplaceComponent = connector(
       }
       return () => clearTimeout(delay);
     }, []);
-
-    if (isPending) {
-      return <LoadingImg />;
-    }
-    if (isError) {
-      return <div>ERROR!</div>;
-    }
-    if (!cards || cards.length === 0) {
+    if (isPending) return <LoadingElem />;
+    if (isError) return <div>ERROR!</div>;
+    if (!cards || cards.length === 0)
       return <div>{message ? "Something is wrong!" : null}</div>;
-    }
-    if (isLoaded) {
-      return (
-        <div className={classes.contentBack}>
-          <ExploreMarketplace />
-        </div>
-      );
-    }
-    return null;
+    if (isLoaded) return <ExploreMarketplace />;
   }
 );
 export default ExploreMarketplaceComponent;

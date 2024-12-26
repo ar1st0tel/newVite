@@ -1,12 +1,21 @@
-@use "../../../variables" as *;
+@use "src/variables" as *;
 
-.table {
+.contentBack {
+  margin: 0 60px;
   font-family: Poppins, sans-serif;
   display: flex;
   flex-direction: column;
   text-align: end;
   row-gap: 2vh;
+  color: black;
 }
+
+@media screen and (max-width: $max-width-mobile) {
+  .contentBack {
+    margin: 0 30px;
+  }
+}
+
 .items {
   display: grid;
   grid-template-rows: repeat(4, 10vh);
