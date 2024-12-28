@@ -1,41 +1,50 @@
-@use "../../../../variables" as *;
+@use "../../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .header {
   text-align: center;
-  color: black;
+  color: $color-custom-black;
   font-size: 45px;
   margin-bottom: 80px;
   font-weight: 500;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 4fr repeat(5, 3fr);
+  color: $color-custom-light-grey;
+}
+
+.volume {
+  font-size: 22px;
+}
+
+.dayPercent {
+  font-size: 22px;
+}
+
+.floorPrice {
+  font-size: 22px;
+}
+
+.owners {
+  font-size: 22px;
+}
+
+.items1 {
+  font-size: 22px;
+}
+
+.collection {
+  display: grid;
+  text-align: start;
+  font-size: 22px;
 }
 
 @media screen and (max-width: $max-width-mobile) {
   .header {
     font-size: 30px;
   }
-}
-
-.title {
-  display: grid;
-  grid-template-columns: 4fr repeat(5, 3fr);
-  color: #93989a;
-}
-
-.volume {
-  font-size: 22px;
-}
-.dayPercent {
-  font-size: 22px;
-}
-.floorPrice {
-  font-size: 22px;
-}
-.owners {
-  font-size: 22px;
-}
-.items1 {
-  font-size: 22px;
-}
-@media screen and (max-width: $max-width-mobile) {
   .title {
     display: flex;
     justify-content: space-between;
@@ -56,15 +65,6 @@
   .items1 {
     display: none;
   }
-}
-
-.collection {
-  display: grid;
-  text-align: start;
-  font-size: 22px;
-}
-
-@media screen and (max-width: $max-width-mobile) {
   .collection {
     font-size: 14px;
   }

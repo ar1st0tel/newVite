@@ -12,7 +12,7 @@ interface CardsFromCreatorListProps {
 const CardsFromCreatorList: React.FC<CardsFromCreatorListProps> = ({
   isMobile,
   cards,
-}: CardsFromCreatorListProps) => {
+}) => {
   return (
     <div className={classes.itemsTable}>
       {cards

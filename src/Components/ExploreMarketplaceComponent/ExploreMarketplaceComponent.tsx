@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { RootState } from "@/ReduxFeatures/Store/Store.ts";
 import { fetchCardsAsync } from "@/Api/AsyncThunk/FetchCardsAsync/FetchCardsAsync.ts";
-import { useMediaQuery } from "react-responsive";
 import LoadingElem from "@/HelpersComponents/LoadingElem/LoadingElem.tsx";
+import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
+import {
+  cardsOnMobilePage,
+  cardsOnPage,
+} from "@/HelpersComponents/helpers/elementsOnPage.ts";
 
 const mapStateToProps = (state: RootState) => ({
   cards: state.CardSlice.cards,
@@ -15,16 +19,12 @@ const mapStateToProps = (state: RootState) => ({
 const mapDispatchToProps = { fetchCardsAsync };
 const connector = connect(mapStateToProps, mapDispatchToProps);
 type Props = ConnectedProps<typeof connector>;
-let cardsOnPage = 8;
 const ExploreMarketplaceComponent = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
-    const isMobile = useMediaQuery({ maxWidth: 425 });
+    const isMobile = useIsMobile();
     const [message, setMessage] = useState(false);
     useEffect(() => {
-      if (isMobile) {
-        cardsOnPage = 4;
-      }
-      fetchCardsAsync(cardsOnPage);
+      fetchCardsAsync(isMobile ? cardsOnMobilePage : cardsOnPage);
     }, [fetchCardsAsync]);
 
     useEffect(() => {

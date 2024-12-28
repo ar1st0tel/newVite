@@ -1,5 +1,5 @@
 import classes from "./Card.module.scss";
-import Ethereum from "@/Pictures/Ethereum.png";
+import Ethereum from "@/pictures/Ethereum.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ card }) => {
         <div className={classes.name}>{card.name}</div>
         <div className={classes.lineInfo}>
           <div className={classes.info}>
-            <div>Current bid</div>
+            <span>Current bid</span>
             <div className={classes.priceLine}>
               <img src={Ethereum} alt="1" /> {card.price}
             </div>

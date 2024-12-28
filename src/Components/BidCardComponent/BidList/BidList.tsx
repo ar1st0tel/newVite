@@ -1,8 +1,8 @@
 import { BidListSlice } from "@/ReduxFeatures/BidListSlice/BidListSlice.ts";
 import * as React from "react";
 import classes from "./BidList.module.scss";
-import Verification from "@/Pictures/Verification.png";
-import EthereumBig from "@/Pictures/EthereumBig.png";
+import Verification from "@/pictures/Verification.png";
+import EthereumBig from "@/pictures/EthereumBig.png";
 
 interface BidListProps {
   bidList: BidListSlice;
@@ -16,10 +16,18 @@ const BidList: React.FC<BidListProps> = ({ bidList }) => {
       <div className={classes.left}>
         <div className={classes.logoContainer}>
           <div className={classes.logo}>
-            <img src={bidList.picture} alt={bidList.name} />
+            <img
+              src={bidList.picture}
+              className={classes.logoImg}
+              alt={bidList.name}
+            />
           </div>
           <div className={classes.verification}>
-            <img src={Verification} alt="1" />
+            <img
+              src={Verification}
+              className={classes.verificationImg}
+              alt="1"
+            />
           </div>
         </div>
         <div>
@@ -30,7 +38,7 @@ const BidList: React.FC<BidListProps> = ({ bidList }) => {
         </div>
       </div>
       <div className={classes.priceLine}>
-        <img src={EthereumBig} alt="" />
+        <img src={EthereumBig} className={classes.priceLineImg} alt="" />
         <span className={classes.price}>{bidList.price}</span>
       </div>
     </div>

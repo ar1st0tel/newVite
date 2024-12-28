@@ -1,5 +1,5 @@
 import classes from "./NavigationComponent.module.scss";
-import LogoBlack from "@/Pictures/LogoBlack.png";
+import LogoBlack from "@/pictures/LogoBlack.png";
 import NavigationTitles from "@/Components/NavigationComponent/NavigationTitles/NavigationTitles.tsx";
 import SearchArea from "@/Components/NavigationComponent/SearchArea/SearchArea.tsx";
 import { NavLink } from "react-router-dom";

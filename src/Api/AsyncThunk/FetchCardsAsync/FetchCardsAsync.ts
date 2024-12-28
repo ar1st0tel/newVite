@@ -4,7 +4,7 @@ import { CardsApi } from "@/Api/AsyncThunk/FetchCardsAsync/types.ts";
 
 export const fetchCardsAsync = createAsyncThunk(
   "CardSlice/fetchCards",
-  async (limit: number | undefined) => {
+  async (limit?: number) => {
     const url = limit
       ? `http://localhost:3000/items?_limit=${limit}`
       : `http://localhost:3000/items`;

@@ -1,10 +1,11 @@
-@use "../../../variables" as *;
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: white;
+  background: $color-white;
   margin: 55px 50px 130px 50px;
   padding: 60px;
   border-radius: 25px;
@@ -34,17 +35,16 @@
   display: flex;
   width: 564px;
   height: 560px;
-}
 
-.picContainer img {
-  border-radius: 55px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .picContainerImg {
+    border-radius: 55px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-
 .titleName {
-  color: #292b39;
+  color: $color-custom-black;
   font-weight: 600;
   font-size: 50px;
   line-height: 32px;
@@ -53,7 +53,7 @@
 
 .description {
   width: 430px;
-  color: #888;
+  color: $color-custom-light-grey;
   font-weight: 400;
   font-size: 20px;
   line-height: 29px;
@@ -73,7 +73,7 @@
 }
 
 .grayText {
-  color: #8d8d8d;
+  color: $color-custom-light-grey;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -81,7 +81,7 @@
 
 .grayTextEnd {
   display: flex;
-  color: #8d8d8d;
+  color: $color-custom-light-grey;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -89,7 +89,7 @@
 }
 
 .blackText {
-  color: #000;
+  color: $color-custom-black;
   font-weight: 500;
   font-size: 26px;
   line-height: 39px;
@@ -98,7 +98,7 @@
 .blackTextBold {
   display: flex;
   align-items: center;
-  color: #000;
+  color: $color-custom-black;
   font-weight: 600;
   font-size: 33px;
   line-height: 49px;
@@ -106,7 +106,7 @@
 }
 
 .blackTextLight {
-  color: #000;
+  color: $color-custom-black;
   font-weight: 400;
   font-size: 19px;
   line-height: 30px;
@@ -136,8 +136,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
+  background: $color-custom-black;
+  color: $color-custom-white;
   gap: 10px;
   width: 100%;
   height: 79px;
@@ -146,9 +146,10 @@
   font-weight: 700;
   line-height: 28px;
   font-family: Poppins, sans-serif;
-}
-.buttonBid:hover{
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media screen and (max-width: $max-width-mobile) {
@@ -161,16 +162,14 @@
     width: 286px;
   }
 
-  .picContainer
-  {
+  .picContainer {
     width: 284px;
     height: 284px;
-  }
 
-  .picContainer img {
-    border-radius: 30px;
+    .picContainerImg {
+      border-radius: 30px;
+    }
   }
-
   .nameAndDescription {
     width: 100%;
     flex-direction: column;
@@ -202,10 +201,11 @@
     width: auto;
     height: auto;
     margin-bottom: 43px;
-  }
-  .authorImgContainer img {
-    width: 37px;
-    height: 37px;
+
+    .authorImgContainerPic {
+      width: 37px;
+      height: 37px;
+    }
   }
   .grayText {
     font-size: 10px;

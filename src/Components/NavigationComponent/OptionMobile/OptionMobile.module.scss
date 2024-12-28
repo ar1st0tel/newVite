@@ -1,11 +1,30 @@
-@use "src/variables" as *;
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .optionMobile {
   display: none;
 }
+
 .optionsContainer {
   display: none;
 }
+
+.itemBlack:active,
+.itemBlack:hover,
+.itemBlack {
+  text-decoration: none;
+  color: $color-custom-black;
+  cursor: pointer;
+}
+
+.itemGray:active,
+.itemGray:hover,
+.itemGray {
+  text-decoration: none;
+  color: $color-custom-dark-grey;
+  cursor: pointer;
+}
+
 @media screen and (max-width: $max-width-mobile) {
   .optionMobile {
     display: flex;
@@ -19,19 +38,4 @@
     margin-top: 20px;
     justify-items: end;
   }
-}
-
-.itemBlack:active,
-.itemBlack:hover,
-.itemBlack {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-}
-.itemGray:active,
-.itemGray:hover,
-.itemGray {
-  text-decoration: none;
-  color: #606060;
-  cursor: pointer;
 }

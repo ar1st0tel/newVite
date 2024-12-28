@@ -1,6 +1,6 @@
 import classes from "./LineTC.module.scss";
 import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
-import EthereumBig from "@/Pictures/EthereumBig.png";
+import EthereumBig from "@/pictures/EthereumBig.png";
 
 interface LineTCProps {
   line: LineSlice;
@@ -28,19 +28,21 @@ const LineTC: React.FC<LineTCProps> = ({ line }) => {
         </div>
       </div>
       <div className={classes.value}>
-        <img src={EthereumBig} alt="1" /> {line.volume}
+        <img className={classes.valueImg} src={EthereumBig} alt="1" />{" "}
+        {line.volume}
       </div>
       <div className={classes.value}>
         <span className={color}>{line.dayPercent}</span>
       </div>
       <div className={classes.value}>
-        <img src={EthereumBig} alt="1" /> {line.floorPrice}
+        <img className={classes.valueImg} src={EthereumBig} alt="1" />{" "}
+        {line.floorPrice}
       </div>
       <div className={classes.value}>{line.owners}K</div>
       <div className={classes.value}> {line.items}</div>
       <div className={classes.mobileValue}>
         <div className={classes.mobileVolume}>
-          <img src={EthereumBig} alt="1" />
+          <img className={classes.mobileVolumeImg} src={EthereumBig} alt="1" />
           {line.volume}
         </div>
         <div className={classes.mobileDayPercent}>

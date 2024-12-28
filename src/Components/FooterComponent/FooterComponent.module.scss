@@ -1,8 +1,9 @@
-@use "../../variables" as *;
+@use "../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .table {
-  background: #141416;
-  color: #b9b9b9;
+  background: $color-custom-black;
+  color: $color-custom-light-grey;
   display: flex;
   flex-direction: column;
   padding: 80px 60px;
@@ -13,7 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 30px;
-  border-bottom: 1.5px solid #818181;
+  border-bottom: 1.5px solid $color-custom-light-grey;
 }
 
 .line2 {
@@ -29,7 +30,7 @@
 }
 
 .whiteLogo {
-  color: white;
+  color: $color-custom-white;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -38,7 +39,7 @@
 
 .link,
 .link:active {
-  color: #818181;
+  color: $color-custom-light-grey;
 }
 
 .line3 {
@@ -77,9 +78,9 @@
     width: 100%;
     margin: 0 30px 30px 30px;
     justify-content: center;
-    border-top: 1.5px solid #818181;
+    border-top: 1.5px solid $color-custom-light-grey;
     padding-top: 30px;
-    color: #999999;
+    color: $color-custom-dark-grey;
     display: flex;
     font-size: 14px;
   }

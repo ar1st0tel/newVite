@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import classes from "./BidInputSection.module.scss";
-import BidPicture from "@/Pictures/BidPicture.png";
+import BidPicture from "@/pictures/BidPicture.png";
 
 interface BidInputSectionProps {
   bidValue: string;
@@ -43,7 +43,7 @@ const BidInputSection: React.FC<BidInputSectionProps> = ({
         />
       </div>
       <button className={classes.button}>
-        <img src={BidPicture} alt="$" />
+        <img src={BidPicture} className={classes.buttonImg} alt="$" />
         Submit
       </button>
     </div>

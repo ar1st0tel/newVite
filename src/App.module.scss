@@ -1,4 +1,4 @@
-@use "src/variables" as *;
+@use "variables.module" as *;
 
 .background {
   background: #f9f9f9;
@@ -14,7 +14,7 @@
   }
 }
 
-.table {
+.table{
   display: flex;
   flex-direction: column;
   align-items: center;

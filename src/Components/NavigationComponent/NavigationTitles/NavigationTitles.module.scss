@@ -1,14 +1,9 @@
-@use "../../../variables" as *;
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .nav {
   display: grid;
   width: 445px;
-}
-
-@media screen and (max-width: $max-width-mobile) {
-  .nav {
-    display: none;
-  }
 }
 
 .boxSmall {
@@ -16,21 +11,29 @@
   align-items: center;
   grid-template-columns: repeat(4, auto);
   gap: 0 3vw;
-  color: #606060;
+  color: $color-custom-dark-grey;
 }
+
 .itemBlack:active,
 .itemBlack:hover,
 .itemBlack {
   text-decoration: none;
   justify-self: center;
-  color: black;
+  color: $color-custom-black;
   cursor: pointer;
 }
+
 .itemGray:active,
 .itemGray:hover,
 .itemGray {
   text-decoration: none;
-  color: #606060;
+  color: $color-custom-dark-grey;
   justify-self: center;
   cursor: pointer;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .nav {
+    display: none;
+  }
 }

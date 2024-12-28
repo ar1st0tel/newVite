@@ -1,6 +1,6 @@
 import classes from "./CardExtended.module.scss";
-import EthereumBig from "@/Pictures/EthereumBig.png";
-import BidPicture from "@/Pictures/BidPicture.png";
+import EthereumBig from "@/pictures/EthereumBig.png";
+import BidPicture from "@/pictures/BidPicture.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 
 interface CardExtendedProps {
@@ -15,7 +15,12 @@ const CardExtended: React.FC<CardExtendedProps> = ({
   return (
     <div className={classes.card} key={cardExtended.id}>
       <div className={classes.picContainer}>
-        <img src={cardExtended.img} alt={cardExtended.name} loading="lazy" />
+        <img
+          className={classes.picContainerImg}
+          src={cardExtended.img}
+          alt={cardExtended.name}
+          loading="lazy"
+        />
       </div>
       <div className={classes.nameAndDescription}>
         <div className={classes.cardName}>
@@ -25,7 +30,11 @@ const CardExtended: React.FC<CardExtendedProps> = ({
         <div className={classes.authorAndOwner}>
           <div className={classes.author}>
             <div className={classes.authorImgContainer}>
-              <img src={cardExtended.authorPic} alt={cardExtended.author} />
+              <img
+                className={classes.authorImgContainerPic}
+                src={cardExtended.authorPic}
+                alt={cardExtended.author}
+              />
             </div>
             <span>
               <div className={classes.grayText}>Created by</div>
@@ -34,7 +43,11 @@ const CardExtended: React.FC<CardExtendedProps> = ({
           </div>
           <div className={classes.author}>
             <div className={classes.authorImgContainer}>
-              <img src={cardExtended.ownerPic} alt={cardExtended.owner} />
+              <img
+                className={classes.authorImgContainerPic}
+                src={cardExtended.ownerPic}
+                alt={cardExtended.owner}
+              />
             </div>
             <span>
               <div className={classes.grayText}>Owned by</div>

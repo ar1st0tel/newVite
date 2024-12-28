@@ -1,12 +1,12 @@
-import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
-import classes from "@/Components/ExploreMarketplaceComponent/ExploreMarketplaceFolder/ExploreMarketplace.module.scss";
-import Category from "@/Pictures/Category.png";
-import Collection from "@/Pictures/Collection.png";
-import Price from "@/Pictures/Price.png";
+import classes from "./ExploreMarketplaceHeader.module.scss";
+import Category from "@/pictures/Category.png";
+import Collection from "@/pictures/Collection.png";
+import Price from "@/pictures/Price.png";
+import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
 
 const ExploreMarketplaceHeader = () => {
-  const isMobile = useMediaQuery({ maxWidth: 425 });
+  const isMobile = useIsMobile();
   const location = useLocation();
   const hideButton: boolean = location.pathname === "/discover" || isMobile;
   const topicNFT: boolean = location.pathname === "/discover";

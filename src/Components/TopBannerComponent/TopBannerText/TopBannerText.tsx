@@ -1,10 +1,10 @@
 import classes from "./TopBannerText.module.scss";
-import Stats from "@/HelpersComponents/stats/Stats.tsx";
-import ButtonExplore from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonExplore.tsx";
-import ButtonCreate from "@/HelpersComponents/ExploreAndCreateButtonsTopBanner/ButtonCreate.tsx";
-import TrustPilot from "@/Pictures/TrustPilot.png";
-import TrustPilotName from "@/Pictures/TrustPilotName.png";
-import Stars from "@/Pictures/Stars.png";
+import Stats from "@/HelpersComponents/Stats/Stats.tsx";
+import ButtonExplore from "@/HelpersComponents/ButtonsTopBanner/ButtonExplore.tsx";
+import ButtonCreate from "@/HelpersComponents/ButtonsTopBanner/ButtonCreate.tsx";
+import TrustPilot from "@/pictures/TrustPilot.png";
+import TrustPilotName from "@/pictures/TrustPilotName.png";
+import Stars from "@/pictures/Stars.png";
 
 const TopBannerText = () => {
   return (

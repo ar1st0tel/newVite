@@ -1,9 +1,10 @@
-@use "../../../variables" as *;
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .box1 {
   display: flex;
   flex-direction: row;
-  color: #606060;
+  color: $color-custom-light-grey;
   align-items: center;
   justify-content: space-between;
   gap: 45px;

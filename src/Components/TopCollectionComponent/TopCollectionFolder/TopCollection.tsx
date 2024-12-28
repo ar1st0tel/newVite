@@ -6,6 +6,7 @@ import { LineSlice } from "@/ReduxFeatures/LineSlice/LineSlice.ts";
 import { useEffect } from "react";
 import TableTitle from "@/Components/TopCollectionComponent/TopCollectionFolder/TableTitle/TableTitle.tsx";
 import LineTC from "@/Components/TopCollectionComponent/TopCollectionFolder/LineTC/LineTC.tsx";
+import { linesOnPage } from "@/HelpersComponents/helpers/elementsOnPage.ts";
 
 const mapStateToProps = (state: RootState) => ({
   LineArray: state.LineSlice.lines,
@@ -17,7 +18,6 @@ const mapDispatchToProps = { fetchLinesAsync };
 const connector = connect(mapStateToProps, mapDispatchToProps);
 
 type CollectionProps = ConnectedProps<typeof connector>;
-const linesOnPage = 4;
 const TopCollection = connector(
   ({
     LineArray,

@@ -1,4 +1,4 @@
-@use "../../../variables" as *;
+@use "../../../variables.module" as *;
 
 .right {
   display: flex;
@@ -32,12 +32,6 @@
   }
 }
 
-@media screen and (max-width: $max-width-mobile) {
-  .bigPic {
-    width: 208px;
-  }
-}
-
 .smlPics {
   display: flex;
   flex-direction: column;
@@ -52,30 +46,13 @@
   max-height: 185px;
 }
 
-@media screen and (max-width: $max-width-mobile) {
-  .row {
-    max-height: 90px;
-  }
-}
-
 .arrow {
   rotate: -7deg;
   width: 40%;
   align-self: center;
 }
-@media screen and (max-width: $max-width-mobile) {
-  .arrow {
-    width: 50%;
-  }
-}
 
 .dots {
-}
-
-@media screen and (max-width: $max-width-mobile) {
-  .dots {
-    width: 55px;
-  }
 }
 
 .containerDots {
@@ -108,6 +85,18 @@
 }
 
 @media screen and (max-width: $max-width-mobile) {
+  .bigPic {
+    width: 208px;
+  }
+  .row {
+    max-height: 90px;
+  }
+  .arrow {
+    width: 50%;
+  }
+  .dots {
+    width: 55px;
+  }
   .containerSmlPic {
     width: 116px;
     height: 172px;

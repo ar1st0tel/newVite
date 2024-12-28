@@ -4,7 +4,7 @@ import { LinesApi } from "@/Api/AsyncThunk/FetchLinesAsync/types.ts";
 
 export const fetchLinesAsync = createAsyncThunk(
   "lines/fetchLines",
-  async (limit: number | undefined) => {
+  async (limit?: number) => {
     const url = limit
       ? `http://localhost:3000/collections?_limit=${limit}`
       : `http://localhost:3000/collections`;

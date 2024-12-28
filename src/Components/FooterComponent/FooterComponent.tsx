@@ -1,5 +1,5 @@
 import classes from "./FooterComponent.module.scss";
-import LogoWhite from "@/Pictures/LogoWhite.png";
+import LogoWhite from "@/pictures/LogoWhite.png";
 import { NavLink } from "react-router-dom";
 import FootLineTop from "@/Components/FooterComponent/FootLineTop/FootLineTop.tsx";
 import FootLineBottom from "@/Components/FooterComponent/FootLineBottom/FootLineBottom.tsx";

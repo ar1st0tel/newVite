@@ -1,6 +1,6 @@
 import { MouseEvent, useRef, useState } from "react";
 import classes from "./OptionMobile.module.scss";
-import OptionsMobile from "@/Pictures/OptionsMobile.png";
+import OptionsMobile from "@/pictures/OptionsMobile.png";
 import { NavLink } from "react-router-dom";
 
 const OptionMobile = () => {

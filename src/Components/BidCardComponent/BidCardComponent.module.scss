@@ -1,4 +1,5 @@
-@use "src/variables" as *;
+@use "../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .bidContent {
   position: fixed;
@@ -7,8 +8,8 @@
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  background: #f9f9f9;
-  border: 2px solid black;
+  background: $color-custom-white;
+  border: 2px solid $color-custom-black;
   border-radius: 21px;
   padding: 40px 20px;
   gap: 30px;

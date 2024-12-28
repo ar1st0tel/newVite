@@ -5,11 +5,11 @@ import CardExtended from "@/Components/CardExtendedComponent/CardExtended/CardEx
 import { useEffect } from "react";
 import classes from "./CardExtendedComponent.module.scss";
 import { useNavigate, useParams } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 import BidCardComponent from "@/Components/BidCardComponent/BidCardComponent.tsx";
 import { useModalContext } from "@/ContextHooks/ContexHooks.ts";
 import CardExtendedHeader from "@/Components/CardExtendedComponent/CardExtendedHeader/CardExtendedHeader.tsx";
 import CardsFromCreatorList from "@/Components/CardExtendedComponent/CardsFromCreatorList/CardsFromCreatorList.tsx";
+import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
 
 const mapStateToProps = (state: RootState) => ({
   CardExposed: state.CardSlice.cards,
@@ -39,7 +39,7 @@ const CardExtendedComponent = connector(
     const handleGoBack = () => {
       navigate(-1);
     };
-    const isMobile = useMediaQuery({ maxWidth: 425 });
+    const isMobile = useIsMobile();
     const { id } = useParams<{ id: string }>();
     const { showModal, toggleModal } = useModalContext();
     if (isPending) return <div>...loading...</div>;

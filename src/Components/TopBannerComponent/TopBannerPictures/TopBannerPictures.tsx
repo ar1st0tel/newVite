@@ -1,8 +1,8 @@
 import classes from "./TopBannerPictures.module.scss";
-import Rectangle3 from "@/Pictures/Rectangle3.png";
-import Arrow from "@/Pictures/Arrow.png";
-import Dots from "@/Pictures/Dots.png";
-import Rectangle3Small from "@/Pictures/Rectangle3Small.png";
+import Rectangle3 from "@/pictures/Rectangle3.png";
+import Arrow from "@/pictures/Arrow.png";
+import Dots from "@/pictures/Dots.png";
+import Rectangle3Small from "@/pictures/Rectangle3Small.png";
 
 const TopBannerPictures = () => {
   return (

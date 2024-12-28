@@ -4,7 +4,7 @@ import { FetchBidListApi } from "@/Api/AsyncThunk/FetchBidListAsync/types.ts";
 
 export const fetchBidListAsync = createAsyncThunk(
   "BidHistory/fetchBidHistory",
-  async (limit: number | undefined) => {
+  async (limit?: number) => {
     const url = limit
       ? `http://localhost:3000/BidList?_limit=${limit}`
       : "http://localhost:3000/BidList";

@@ -1,4 +1,5 @@
-@use "src/variables" as *;
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .buttonsArea {
   display: flex;
@@ -11,14 +12,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 29px;
-  color: black;
-}
-
-@media screen and (max-width: $max-width-mobile) {
-  .label {
-    font-size: 14px;
-    line-height: 21px;
-  }
+  color: $color-custom-black;
 }
 
 .bidLine {
@@ -27,63 +21,39 @@
   height: 70px;
 }
 
-@media screen and (max-width: $max-width-mobile) {
-  .bidLine {
-    height: 50px;
-  }
-}
-
 .selectorContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background: black;
+  color: $color-custom-white;
+  background: $color-custom-black;
   border-radius: 18px 0 0 18px;
-  border: 1px solid black;
+  border: 1px solid $color-custom-black;
   box-sizing: border-box;
   width: 160px;
-}
-@media screen and (max-width: $max-width-mobile) {
-  .selectorContainer {
-    width: 110px;
-  }
 }
 
 .selector {
   font-family: Poppins, "sans-serif";
   font-size: 20px;
-  color: white;
-  background: black;
+  color: $color-custom-white;
+  background: $color-custom-black;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-@media screen and (max-width: $max-width-mobile) {
-  .selector {
-    font-size: 15px;
-  }
-}
 .input {
-  color: black;
-  background: white;
+  color: $color-custom-black;
+  background: $color-custom-white;
   border-radius: 0 18px 18px 0;
-  border: 1px solid black;
+  border: 1px solid $color-custom-black;
   font-family: Poppins, "sans-serif";
   font-size: 20px;
   box-sizing: border-box;
   padding-left: 10px;
-}
-.input:focus {
-  outline: none;
-  border: 1px solid black;
-}
-
-@media screen and (max-width: $max-width-mobile) {
-  .input {
-    width: 166px;
-    font-size: 15px;
+  &:focus{
+    outline: none;
   }
 }
 
@@ -92,9 +62,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid black;
-  background: black;
-  color: white;
+  border: 1px solid $color-custom-black;
+  background: $color-custom-black;
+  color: $color-custom-white;
   border-radius: 18px;
   height: 70px;
   font-size: 18px;
@@ -102,12 +72,30 @@
 }
 
 @media screen and (max-width: $max-width-mobile) {
+  .label {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .bidLine {
+    height: 50px;
+  }
+  .selectorContainer {
+    width: 110px;
+  }
+  .selector {
+    font-size: 15px;
+  }
+  .input {
+    width: 166px;
+    font-size: 15px;
+  }
   .button {
     height: 50px;
     font-size: 12px;
     gap: 7px;
-  }
-  .button img {
-    height: 15px;
+
+    .buttonImg {
+      height: 15px;
+    }
   }
 }

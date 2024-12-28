@@ -1,3 +1,5 @@
+@use "src/colors.module" as *;
+
 .stat {
   display: grid;
   grid-template-rows: 2fr 1fr;
@@ -10,7 +12,7 @@
   line-height: 45.96px;
   display: grid;
   align-items: end;
-  color: #141416;
+  color: $color-custom-black;
 }
 
 .weak {
@@ -20,5 +22,5 @@
   line-height: 18.39px;
   display: grid;
   align-items: center;
-  color: #848586;
+  color: $color-custom-light-grey;
 }

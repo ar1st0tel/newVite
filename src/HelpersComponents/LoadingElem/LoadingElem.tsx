@@ -1,5 +1,5 @@
 import classes from "./LoadingElem.module.scss";
-import Loading from "@/Pictures/Loading.png";
+import Loading from "@/pictures/Loading.png";
 
 const LoadingElem = () => {
   return (

@@ -1,17 +1,18 @@
+@use "src/colors.module" as *;
+
 .item {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  background: #fff;
+  border: 1px solid $color-custom-black;
+  background: $color-white;
   border-radius: 23px;
   width: fit-content;
   cursor: pointer;
   box-shadow: 19px 12px 15px rgba(0, 0, 0, 0.1);
-}
-
-.item:hover {
-  border: 1px solid firebrick;
-  border-radius: 30px;
+  &:hover{
+    border: 1px solid $color-custom-black;
+    border-radius: 30px;
+  }
 }
 
 .cardContainer {
@@ -36,7 +37,7 @@
 
 .name {
   grid-area: name;
-  color: #141416;
+  color: $color-custom-black;
   font-weight: 600;
   font-size: 20px;
 }
@@ -49,7 +50,7 @@
 
 .info {
   grid-area: info;
-  color: #94a3b8;
+  color: $color-custom-light-grey;
   font-size: 14px;
 }
 
@@ -65,6 +66,6 @@
 
 .buttonBid {
   height: 50%;
-  color: white;
-  background: #201f1f;
+  color: $color-custom-white;
+  background: $color-custom-black;
 }

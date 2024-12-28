@@ -19,7 +19,6 @@ const AppRoutes = () => {
           <Route path="/sells" element={<PageSells />} />
           <Route path="/stats" element={<PageStats />} />
           <Route path="/test" element={<TEST_PAGE_FOR_FUTURE_COMPONENTS />} />
-          <Route path="/card" element={<PageCardExtended />} />
           <Route path="/card/:id" element={<PageCardExtended />} />
         </Routes>
       </div>

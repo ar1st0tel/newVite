@@ -1,11 +1,12 @@
-@use "src/variables" as *;
+@use "../../variables.module" as *;
+@use "src/colors.module" as *;
 
 .button1:active,
 .button1:hover,
 .button1 {
   border-radius: 12px;
-  background: black;
-  color: white;
+  background: $color-custom-black;
+  color: $color-custom-white;
   max-height: 57px;
   height: 57px;
   letter-spacing: 1px;

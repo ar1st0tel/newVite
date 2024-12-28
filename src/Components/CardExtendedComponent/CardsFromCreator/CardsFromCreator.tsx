@@ -1,7 +1,7 @@
 import classes from "./CardsFromCreator.module.scss";
-import Ethereum from "@/Pictures/Ethereum.png";
-import Verification from "@/Pictures/Verification.png";
-import Heart from "@/Pictures/Heart.png";
+import Ethereum from "@/pictures/Ethereum.png";
+import Verification from "@/pictures/Verification.png";
+import Heart from "@/pictures/Heart.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
 import { useNavigate } from "react-router-dom";
 

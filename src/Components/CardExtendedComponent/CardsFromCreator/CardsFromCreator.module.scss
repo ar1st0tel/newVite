@@ -1,18 +1,19 @@
+@use "src/colors.module" as *;
+
 .item {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  background: #fff;
+  border: 1px solid $color-custom-black;
+  background: $color-white;
   border-radius: 23px;
   width: fit-content;
   height: 300px;
   cursor: pointer;
   box-shadow: 19px 12px 15px rgba(0, 0, 0, 0.1);
-}
-
-.item:hover {
-  border: 1px solid firebrick;
-  border-radius: 35px;
+  &:hover {
+    border: 1px solid $color-custom-black;
+    border-radius: 35px;
+  }
 }
 
 .cardContainer {
@@ -35,7 +36,7 @@
 }
 
 .name {
-  color: #141416;
+  color: $color-custom-black;
   font-weight: 700;
   font-size: 20px;
 }
@@ -47,7 +48,7 @@
 }
 
 .info {
-  color: #141416;
+  color: $color-custom-black;
   font-size: 17px;
   font-weight: 600;
   font-family: Poppins, "sans-serif";
@@ -68,6 +69,6 @@
 
 .buttonBid {
   height: 50%;
-  color: white;
+  color: $color-custom-white;
   background: #201f1f;
 }
