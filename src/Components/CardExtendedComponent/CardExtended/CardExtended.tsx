@@ -2,6 +2,7 @@ import classes from "./CardExtended.module.scss";
 import EthereumBig from "@/pictures/EthereumBig.png";
 import BidPicture from "@/pictures/BidPicture.png";
 import { CardSlice } from "@/ReduxFeatures/CardSlice/CardSlice.ts";
+import { CardExtendedAuthor } from "@/Components/CardExtendedComponent/CardExtended/CardExtendedAuthor/CardExtendedAuthor.tsx";
 
 interface CardExtendedProps {
   cardExtended: CardSlice;
@@ -28,32 +29,16 @@ const CardExtended: React.FC<CardExtendedProps> = ({
           <div className={classes.description}>{cardExtended.description}</div>
         </div>
         <div className={classes.authorAndOwner}>
-          <div className={classes.author}>
-            <div className={classes.authorImgContainer}>
-              <img
-                className={classes.authorImgContainerPic}
-                src={cardExtended.authorPic}
-                alt={cardExtended.author}
-              />
-            </div>
-            <span>
-              <div className={classes.grayText}>Created by</div>
-              <div className={classes.blackText}>{cardExtended.author}</div>
-            </span>
-          </div>
-          <div className={classes.author}>
-            <div className={classes.authorImgContainer}>
-              <img
-                className={classes.authorImgContainerPic}
-                src={cardExtended.ownerPic}
-                alt={cardExtended.owner}
-              />
-            </div>
-            <span>
-              <div className={classes.grayText}>Owned by</div>
-              <div className={classes.blackText}>{cardExtended.owner}</div>
-            </span>
-          </div>
+          <CardExtendedAuthor
+            imgSrc={cardExtended.authorPic}
+            name={cardExtended.author}
+            label="Created by"
+          />
+          <CardExtendedAuthor
+            imgSrc={cardExtended.ownerPic}
+            name={cardExtended.owner}
+            label="Owned by"
+          />
         </div>
         <div className={classes.lineInfo}>
           <div className={classes.info}>

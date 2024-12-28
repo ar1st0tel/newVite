@@ -1,24 +1,16 @@
 import classes from "./FootLineTop.module.scss";
 import { NavLink } from "react-router-dom";
+import { contacts } from "@/Components/FooterComponent/FootLineTop/types.ts";
 
 const FootLineTop = () => {
   return (
-    <>
-      <div className={classes.box}>
-        <NavLink className={classes.link} to="#S">
-          Privacy Policy
+    <div className={classes.box}>
+      {contacts.map((item) => (
+        <NavLink key={item.id} to={item.to} className={classes.link}>
+          {item.name}
         </NavLink>
-        <NavLink className={classes.link} to="#S">
-          Team & Conditions
-        </NavLink>
-        <NavLink className={classes.link} to="#S">
-          About Us
-        </NavLink>
-        <NavLink className={classes.link} to="#S">
-          Contact
-        </NavLink>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 export default FootLineTop;

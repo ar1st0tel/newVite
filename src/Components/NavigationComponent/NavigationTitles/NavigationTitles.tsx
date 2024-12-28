@@ -1,15 +1,9 @@
 import classes from "./NavigationTitles.module.scss";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useSelectNavLine } from "@/Components/NavigationComponent/NavigationTitles/hooks.ts";
 
 const NavigationTitles = () => {
-  const [selectedItem, setSelectedItem] = useState<string>(() => {
-    return localStorage.getItem("selectedItem") || "";
-  });
-  const changeColor = (item: string) => {
-    setSelectedItem(item);
-    localStorage.setItem("selectedItem", item);
-  };
+  const { selectedItem, changeColor } = useSelectNavLine();
   return (
     <div className={classes.nav}>
       <div className={classes.boxSmall}>

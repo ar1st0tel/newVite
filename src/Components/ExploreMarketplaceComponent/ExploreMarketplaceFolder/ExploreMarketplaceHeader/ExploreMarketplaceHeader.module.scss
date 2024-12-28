@@ -30,19 +30,6 @@
     display: flex;
     justify-content: center;
   }
-
-  .buttonBorder {
-    border: 2px solid $color-custom-black;
-    border-radius: 14px;
-    &:hover{
-      border-radius: 17px;
-    }
-  }
-}
-
-.buttonAlign {
-  display: flex;
-  align-items: center;
 }
 
 @media screen and (max-width: $max-width-mobile) {
@@ -55,13 +42,6 @@
     display: flex;
     text-align: center;
     width: 200px;
-  }
-  .imgMobile {
-    max-width: 13.5px;
-    height: auto;
-  }
-  .buttonAlign {
-    font-size: 10px;
   }
 }
 

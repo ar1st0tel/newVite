@@ -4,6 +4,7 @@ import Category from "@/pictures/Category.png";
 import Collection from "@/pictures/Collection.png";
 import Price from "@/pictures/Price.png";
 import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
+import { ButtonExploreMarketplace } from "@/HelpersComponents/ButtonExploreMarketplace/ButtonExploreMarketplace.tsx";
 
 const ExploreMarketplaceHeader = () => {
   const isMobile = useIsMobile();
@@ -22,24 +23,9 @@ const ExploreMarketplaceHeader = () => {
       <div className={classes.table}>
         <div className={`${classes.filters} ${classes.buttonBorder}`}>
           {!hideButton && <button className={classes.buttonBorder}>All</button>}
-          <button className={classes.buttonBorder}>
-            <div className={classes.buttonAlign}>
-              <img src={Category} className={classes.imgMobile} alt="1" />
-              Category
-            </div>
-          </button>
-          <button className={classes.buttonBorder}>
-            <div className={classes.buttonAlign}>
-              <img src={Collection} className={classes.imgMobile} alt="1" />
-              Collection
-            </div>
-          </button>
-          <button className={classes.buttonBorder}>
-            <div className={classes.buttonAlign}>
-              <img src={Price} className={classes.imgMobile} alt="1" />
-              Price
-            </div>
-          </button>
+          <ButtonExploreMarketplace imgSrc={Category} name="Category" />
+          <ButtonExploreMarketplace imgSrc={Collection} name="Collection" />
+          <ButtonExploreMarketplace imgSrc={Price} name="Price" />
         </div>
       </div>
     </>
