@@ -1,0 +1,74 @@
+@use "src/colors.module" as *;
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-custom-black;
+  background: $color-white;
+  border-radius: 23px;
+  width: fit-content;
+  height: 300px;
+  cursor: pointer;
+  box-shadow: 19px 12px 15px rgba(0, 0, 0, 0.1);
+  &:hover {
+    border: 1px solid $color-custom-black;
+    border-radius: 35px;
+  }
+}
+
+.cardContainer {
+  padding: 15px 15px 5px 15px;
+  width: 190px;
+}
+
+.img {
+  justify-self: center;
+  width: 190px;
+  height: 168px;
+  border-radius: 19px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 0 15px 21px;
+}
+
+.name {
+  color: $color-custom-black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.lineInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.info {
+  color: $color-custom-black;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Poppins, "sans-serif";
+}
+
+.priceLine {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.likes {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.buttonBid {
+  height: 50%;
+  color: $color-custom-white;
+  background: #201f1f;
+}
