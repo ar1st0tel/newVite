@@ -1,0 +1,22 @@
+@use "../../../../variables.module" as *;
+
+.line {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .line {
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+}

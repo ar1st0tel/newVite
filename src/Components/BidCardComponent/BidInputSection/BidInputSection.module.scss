@@ -1,0 +1,101 @@
+@use "../../../variables.module" as *;
+@use "src/colors.module" as *;
+
+.buttonsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.label {
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+  color: $color-custom-black;
+}
+
+.bidLine {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+}
+
+.selectorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-custom-white;
+  background: $color-custom-black;
+  border-radius: 18px 0 0 18px;
+  border: 1px solid $color-custom-black;
+  box-sizing: border-box;
+  width: 160px;
+}
+
+.selector {
+  font-family: Poppins, "sans-serif";
+  font-size: 20px;
+  color: $color-custom-white;
+  background: $color-custom-black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input {
+  color: $color-custom-black;
+  background: $color-custom-white;
+  border-radius: 0 18px 18px 0;
+  border: 1px solid $color-custom-black;
+  font-family: Poppins, "sans-serif";
+  font-size: 20px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  &:focus{
+    outline: none;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid $color-custom-black;
+  background: $color-custom-black;
+  color: $color-custom-white;
+  border-radius: 18px;
+  height: 70px;
+  font-size: 18px;
+  font-family: Poppins, "sans-serif";
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .label {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .bidLine {
+    height: 50px;
+  }
+  .selectorContainer {
+    width: 110px;
+  }
+  .selector {
+    font-size: 15px;
+  }
+  .input {
+    width: 166px;
+    font-size: 15px;
+  }
+  .button {
+    height: 50px;
+    font-size: 12px;
+    gap: 7px;
+
+    .buttonImg {
+      height: 15px;
+    }
+  }
+}
