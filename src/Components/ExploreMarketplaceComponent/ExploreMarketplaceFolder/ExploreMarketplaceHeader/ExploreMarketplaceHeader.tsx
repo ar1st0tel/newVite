@@ -10,11 +10,11 @@ const ExploreMarketplaceHeader = () => {
   const isMobile = useIsMobile();
   const location = useLocation();
   const hideButton: boolean = location.pathname === "/discover" || isMobile;
-  const topicNFT: boolean = location.pathname === "/discover";
+  const isDiscover: boolean = location.pathname === "/discover";
   return (
     <>
       <div className={classes.text}>
-        {!topicNFT ? (
+        {!isDiscover ? (
           <span className={classes.mobileTitle}>Explore Marketplace</span>
         ) : (
           <span>Discover NFTs</span>

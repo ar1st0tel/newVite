@@ -8,6 +8,13 @@ interface LineTCProps {
 
 const LineTC: React.FC<LineTCProps> = ({ line }) => {
   const color = parseFloat(line.dayPercent) > 0 ? classes.green : classes.red;
+  const values = [
+    { icon: EthereumBig, value: line.volume },
+    { value: <span className={color}>{line.dayPercent}</span> },
+    { icon: EthereumBig, value: line.floorPrice },
+    { value: line.owners + "K" },
+    { value: line.items },
+  ];
   return (
     <div className={classes.line} key={line.id}>
       <div className={classes.name}>
@@ -27,19 +34,14 @@ const LineTC: React.FC<LineTCProps> = ({ line }) => {
           <div className={classes.author}>By {line.author}</div>
         </div>
       </div>
-      <div className={classes.value}>
-        <img className={classes.valueImg} src={EthereumBig} alt="1" />{" "}
-        {line.volume}
-      </div>
-      <div className={classes.value}>
-        <span className={color}>{line.dayPercent}</span>
-      </div>
-      <div className={classes.value}>
-        <img className={classes.valueImg} src={EthereumBig} alt="1" />{" "}
-        {line.floorPrice}
-      </div>
-      <div className={classes.value}>{line.owners}K</div>
-      <div className={classes.value}> {line.items}</div>
+      {values.map((item, index) => (
+        <div key={index} className={classes.value}>
+          {item.icon ? (
+            <img className={classes.valueImg} src={EthereumBig} alt="1" />
+          ) : null}
+          {item.value}
+        </div>
+      ))}
       <div className={classes.mobileValue}>
         <div className={classes.mobileVolume}>
           <img className={classes.mobileVolumeImg} src={EthereumBig} alt="1" />

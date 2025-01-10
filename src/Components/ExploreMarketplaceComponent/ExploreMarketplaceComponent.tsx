@@ -8,7 +8,9 @@ import { useIsMobile } from "@/HelpersComponents/helpers/Hooks/useIsMobile.ts";
 import {
   cardsOnMobilePage,
   cardsOnPage,
+  cardsOnPageDiscover,
 } from "@/HelpersComponents/helpers/elementsOnPage.ts";
+import { useLocation } from "react-router-dom";
 
 const mapStateToProps = (state: RootState) => ({
   cards: state.CardSlice.cards,
@@ -22,9 +24,19 @@ type Props = ConnectedProps<typeof connector>;
 const ExploreMarketplaceComponent = connector(
   ({ cards, isLoaded, isError, isPending, fetchCardsAsync }: Props) => {
     const isMobile = useIsMobile();
+    const location = useLocation();
+    const isDiscover: boolean = location.pathname === "/discover";
     const [message, setMessage] = useState(false);
     useEffect(() => {
-      fetchCardsAsync(isMobile ? cardsOnMobilePage : cardsOnPage);
+      fetchCardsAsync(
+        isDiscover && isMobile
+          ? cardsOnPage
+          : isDiscover
+            ? cardsOnPageDiscover
+            : isMobile
+              ? cardsOnMobilePage
+              : cardsOnPage
+      );
     }, [fetchCardsAsync]);
 
     useEffect(() => {
