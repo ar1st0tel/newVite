@@ -1,0 +1,15 @@
+@use "../../../variables.module" as *;
+
+.itemsTable {
+  margin: 0 50px 50px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .itemsTable {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

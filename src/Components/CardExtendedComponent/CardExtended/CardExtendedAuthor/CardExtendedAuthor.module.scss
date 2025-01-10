@@ -1,0 +1,55 @@
+@use "@/variables.module" as *;
+@use "@/colors.module" as *;
+
+.author {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+}
+
+.authorImgContainer {
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+}
+
+.grayText {
+  color: $color-custom-light-grey;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.blackText {
+  color: $color-custom-black;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .author {
+    flex-direction: row;
+    height: auto;
+  }
+  .authorImgContainer {
+    width: auto;
+    height: auto;
+    margin-bottom: 43px;
+
+    .authorImgContainerPic {
+      width: 37px;
+      height: 37px;
+    }
+  }
+  .grayText {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .blackText {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}

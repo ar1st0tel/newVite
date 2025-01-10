@@ -1,0 +1,20 @@
+@use "variables.module" as *;
+@use "colors.module" as *;
+
+html{
+  overflow-y: scroll ;
+}
+.background {
+  background: $color-custom-white;
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: $max-width-mobile) {
+  .background {
+    max-width: 100%;
+    justify-items: center;
+  }
+}
+
